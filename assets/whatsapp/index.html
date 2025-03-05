@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/right-menu.css">
+
+
+
+
+<!--WhatsApp Icons-->
+    <style type="text/css">
+        #whatsapp .wtsapp{
+            position: fixed;
+            transform: all .5s ease;
+            background-color: #25d366;
+            display: block;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            border-radius:50%;
+            border-right: none;
+            font-weight: 700;
+            font-size: 30px;
+            bottom: 70px;
+            left: 20px;
+            border: 0;
+            z-index: 9999;
+            width: 40px;
+            height: 40px;
+            line-height: 40px; 
+            color: #ffffff;
+        }
+
+        #whatsapp .wtsapp:before{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            display: block;
+            width:95%;
+            height:95%;
+            background-color: #25d366;
+            border-radius: 50px;
+            -webkit-animation: pulse-border 1500ms ease-out infinite;
+            animation: pulse-border 1500ms ease-out infinite;
+        }
+
+        #whatsapp .wtsapp:focus{
+            border: none;
+            outline: none;
+        }
+
+        @keyframes pulse-border{
+            0%{transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1); opacity: 1;}
+            100%{transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5); opacity: 0;}
+        }
+    </style>
+<!--WhatsApp Icons-->
+</head>
+
+<body>
+<!--WhatsApp Icons-->
+<div id="whatsapp">
+    <a href="https://api.whatsapp.com/send/?phone=0744861588&text&app_absent=0" target="_blank" class="wtsapp">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+</div>
+<!--WhatsApp Icons-->
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+<div id="mySidenav" class="sidenav">
+	<a href="" class="dispecerat">
+		<i class="fa fa-phone-square padding-icon fa-2x pull-left" aria-hidden="true"></i>
+		Dispecerat
+	</a>
+</div>
+
+</body>
+</html>
