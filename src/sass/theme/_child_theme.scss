@@ -1,0 +1,45 @@
+
+.floating-menu {
+	.menu-box-absolute-position {
+		display: none;
+	}
+}
+
+
+.logo_column {
+	position: relative;
+
+	.menu-box-absolute-position {
+		position: absolute;
+		top: 20px;
+		left: -8px;
+		width: auto;
+		height: auto;
+		background-color: #fff;
+		z-index: 1000;
+		padding: 0 50px;
+		padding-top: 69px;
+		padding-bottom: 40px;
+		border-radius: 13px 0 60px 60px;
+
+		.product-category {
+			font-size: 1.1em;
+			font-weight: 700;
+			display: block;
+			margin-bottom: 10px;
+
+			a {
+				text-decoration: none;
+				color: #000;
+				display: block;
+				white-space: nowrap;
+			}
+		}
+	}
+	
+	.logo.navbar-brand {
+		z-index: 1001;
+		position: relative;
+		background-color: #fff;
+	}
+}

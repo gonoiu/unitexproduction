@@ -198,6 +198,13 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
                               <img src="<?php the_field('logo_header', 'options'); ?>" alt="" class="logo__sticky">
                            </a>
                         </div>
+                        <div class="menu-box-absolute-position">
+                           <ul>
+                              <li>test</li>
+                              <li>test</li>
+                              <li>test</li>
+                           </ul>
+                        </div>
                      </div>
                      <div class="col-lg-10 col-md-3 col-sm-3 col-xs-3 menu_column">
                         <div class="navbar_togglers hamburger_menu">
