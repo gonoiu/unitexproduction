@@ -301,19 +301,22 @@ $navbar_type = get_theme_mod('understrap_navbar_type', 'collapse');
                                        style="width: 300px">
                                  </a>
                               </div>
+                              <?php 
+                              // Show category menu only on front page
+                              if (is_front_page()): ?>
                               <div class="menu-box-absolute-position">
                                  <?php
                                  $args = array(
                                     'taxonomy' => 'product_cat',
                                     'orderby' => 'name',
                                     'order' => 'ASC',
-                                    'hide_empty' => false, // Set to true to show only categories with products.
-                                    'parent' => 0,     // Only get parent categories.
+                                    'hide_empty' => false,
+                                    'parent' => 0,
                                  );
 
                                  $product_categories = get_terms($args);
 
-                                 if (!empty($product_categories) && !is_wp_error($product_categories)) {
+                                  if (!empty($product_categories) && !is_wp_error($product_categories)) {
                                     foreach ($product_categories as $category) {
                                        $category_link = get_term_link($category);
                                        if (is_wp_error($category_link)) {
@@ -327,6 +330,7 @@ $navbar_type = get_theme_mod('understrap_navbar_type', 'collapse');
                                  ?>
 
                               </div>
+                              <?php endif; ?>
                            </div>
                            <div class="col-lg-10 col-md-3 col-sm-3 col-xs-3 menu_column">
                               <div class="navbar_togglers hamburger_menu">

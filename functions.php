@@ -95,3 +95,9 @@ function set_acf_settings() {
 
 add_filter( 'acf/admin/prevent_escaped_html_notice', '__return_true' );
 
+function mytheme_enqueue_woocommerce_styles() {
+    if (class_exists('WooCommerce')) {
+        wp_enqueue_style('woocommerce-styles', get_template_directory_uri() . '/woocommerce.css');
+    }
+}
+add_action('wp_enqueue_scripts', 'mytheme_enqueue_woocommerce_styles');
