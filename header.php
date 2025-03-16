@@ -11,97 +11,17 @@
 defined('ABSPATH') || exit;
 
 $bootstrap_version = get_theme_mod('understrap_bootstrap_version', 'bootstrap4');
-$navbar_type = get_theme_mod('understrap_navbar_type', 'collapse');
-
-
-?>
-
-
+$navbar_type = get_theme_mod('understrap_navbar_type', 'collapse'); ?>
 <!DOCTYPE html>
-<html lang="en-US">
+<html <?php language_attributes(); ?>>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<?php wp_head(); ?>
+</head>
 
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-      <title>
-         <?php the_field('titlu_website', 'options'); ?>
-      </title>
-
-      <meta name="description" content="<?php the_field('descriere_website', 'options'); ?>">
-      <meta name="keywords" content="<?php the_field('cuvinte_cheie', 'options'); ?>">
-      <meta name="author" content="webetwas">
-
-      <!-- Google Fonts -->
-      <link rel='stylesheet'
-         href='https://fonts.googleapis.com/css?family=Spartan%3A400%2C500%2C600%2C700%2C800%2C900%7CInter%3A300%2C400%2C500%2C600%2C700%2C800%2C900&subset=latin%2Clatin-ext'
-         type='text/css' media='all' />
-      <!-- Google Fonts -->
-      <!-- Style -->
-      <link rel='stylesheet' href='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/css/bootstrap.min.css'
-         type='text/css' media='all' />
-      <link rel='stylesheet' href='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/css/owl.css'
-         type='text/css' media='all' />
-      <link rel='stylesheet' href='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/css/swiper.min.css'
-         type='text/css' media='all' />
-      <link rel='stylesheet'
-         href='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/css/jquery.fancybox.min.css' type='text/css'
-         media='all' />
-      <link rel='stylesheet' href='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/css/icomoon.css'
-         type='text/css' media='all' />
-      <link rel='stylesheet' href='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/css/flexslider.css'
-         type='text/css' media='all' />
-      <link rel='stylesheet' href='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/css/font-awesome.min.css'
-         type='text/css' media='all' />
-      <link rel='stylesheet' href='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/css/style.css'
-         type='text/css' media='all' />
-      <link rel='stylesheet'
-         href='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/css/scss/elements/theme-css.css'
-         type='text/css' media='all' />
-      <link rel='stylesheet' id="creote-color-switcher-css"
-         href='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/css/scss/elements/color-switcher/color5.css'
-         type='text/css' media='all' />
-      <!-- Style-->
-      <!----woocommerce---->
-      <link rel='stylesheet'
-         href='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/css/woocommerce-layout.css' type='text/css'
-         media='all' />
-      <link rel='stylesheet' href='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/css/woocommerce.css'
-         type='text/css' media='all' />
-      <!----woocommerce---->
-
-      <!-- Fav Icon -->
-      <link rel="apple-touch-icon" sizes="180x180"
-         href="<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/favicon_io/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32"
-         href="<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/favicon_io/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16"
-         href="<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/favicon_io/favicon-16x16.png">
-      <link rel="manifest"
-         href="<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/favicon_io/site.webmanifest">
-      <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/favicon_io/favicon.ico"
-         type="image/x-icon">
-      <!-- Fav Icon -->
-
-      <!--catalog-->
-      <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/css/catalog.css">
-      <!--catalog-->
-
-      <!--WhatsApp Icons-->
-      <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/whatsapp/css/whatsapp.css">
-      <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/whatsapp/css/font-awesome.css">
-      <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/whatsapp/css/right-menu.css">
-      <!--WhatsApp Icons-->
-
-      <!-- Your code -->
-      <script
-         src="https://www.google.com/recaptcha/enterprise.js?render=6LfkF18pAAAAAHMzfNqnpNdGHxpsyg4Xj6Sovgir"></script>
-      <!-- Your code -->
-      <?php wp_head(); ?>
-   </head>
-
-
-   <body class="home theme-creote page-home-default-one">
+   <body <?php body_class("home theme-creote page-home-default-one"); ?> <?php understrap_body_attributes(); ?>>
 
       <!--WhatsApp Icons-->
       <div id="whatsapp">
@@ -166,12 +86,7 @@ $navbar_type = get_theme_mod('understrap_navbar_type', 'collapse');
 
                            }
                         }
-
-
                      }
-
-
-
                      echo $i;
                      break;
                   case "ro":

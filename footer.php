@@ -463,8 +463,6 @@ $container = get_theme_mod('understrap_container_type');
 
                      ?>
 
-
-
                   </p>
                </div>
             </div>
@@ -481,37 +479,7 @@ $container = get_theme_mod('understrap_container_type');
    </svg>
 </div>
 <!---========================== javascript ==========================-->
-<script type='text/javascript'
-   src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/jquery-3.6.0.min.js'></script>
-<script type='text/javascript'
-   src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/bootstrap.min.js'></script>
-<script type='text/javascript'
-   src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/jquery.fancybox.js'></script>
-<script type='text/javascript'
-   src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/jQuery.style.switcher.min.js'></script>
-<script type='text/javascript'
-   src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/jquery.flexslider-min.js'></script>
-<script type='text/javascript'
-   src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/color-scheme.js'></script>
-<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/owl.js'></script>
-<script type='text/javascript'
-   src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/swiper.min.js'></script>
-<script type='text/javascript'
-   src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/isotope.min.js'></script>
-<script type='text/javascript'
-   src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/countdown.js'></script>
-<script type='text/javascript'
-   src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/simpleParallax.min.js'></script>
-<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/appear.js'></script>
-<script type='text/javascript'
-   src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/jquery.countTo.js'></script>
-<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/sharer.js'></script>
-<script type='text/javascript'
-   src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/validation.js'></script>
-
-<!-- main-js -->
-<script type='text/javascript'
-   src='<?php echo get_stylesheet_directory_uri(); ?>/assets/assets/js/creote-extension.js'></script>
+<?php wp_footer(); ?>
 <!---========================== javascript ==========================-->
 
 
