@@ -53,80 +53,13 @@ $navbar_type = get_theme_mod('understrap_navbar_type', 'collapse'); ?>
          <!----mini cart----->
          <div class="mini_cart_togglers fixed_cart">
             <div class="mini-cart-count">
-               <?php
-               $lang = "ro";
-               foreach (explode("/", $_SERVER['REQUEST_URI']) as $item) {
-
-                  // IT
-                  if ($item == 'it') {
-                     $translatec = "Visualizzazione per categoria";
-                     $translatep = "Vista del prodotto";
-                     $lang = "it";
-                  }
-                  /** EN */
-                  if ($item == 'en') {
-                     $translatec = "View category";
-                     $translatep = "View product";
-                     $lang = "en";
-                  }
-               }
-               switch ($lang) {
-
-                  case "en":
-                     $i = 0;
-                     if (isset($_COOKIE['produse_en'])) {
-                        $oferta = "<h4>Products in cart:</h4>";
-                        $obj = json_decode(stripslashes($_COOKIE['produse_en']));
-                        if ($obj) {
-
-
-                           foreach ($obj as $item => $value) {
-
-                              $i++;
-
-
-                           }
-                        }
-                     }
-                     echo $i;
-                     break;
-                  case "ro":
-                     $i = 0;
-                     if (isset($_COOKIE['produse'])) {
-                        $oferta = "<h4>Produse adaugate:</h4>";
-                        $obj = json_decode(stripslashes($_COOKIE['produse']));
-                        if ($obj) {
-                           foreach ($obj as $item => $value) {
-                              $i++;
-                           }
-                        }
-                     }
-                     echo $i;
-                     break;
-                  case "it":
-                     $i = 0;
-                     if (isset($_COOKIE['produse_it'])) {
-                        $oferta = "<h4>Prodotti aggiunti:</h4>";
-                        $obj = json_decode(stripslashes($_COOKIE['produse_it']));
-                        if ($obj) {
-
-
-                           foreach ($obj as $item => $value) {
-                              $i++;
-                           }
-                        }
-                     }
-
-                     echo $i;
-                     break;
-
-               }
-               /* COUNT PRODUSE IN COS */
-               ?>
+               <span class="cart-count">
+                  <?php echo WC()->cart->get_cart_contents_count(); ?>
+               </span>
             </div>
             <i class="icon-shopping-cart"></i>
          </div>
-         <!----mini cart----->
+
 
          <div id="page" class="page_wapper hfeed site">
 

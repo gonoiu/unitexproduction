@@ -199,3 +199,15 @@ function custom_woocommerce_category_list() {
 
 // Use this where you want to display the list
 add_shortcode( 'category_list', 'custom_woocommerce_category_list' );
+
+function custom_woocommerce_loop_columns() {
+    return 3; // Change this number to set the number of columns
+}
+add_filter('loop_shop_columns', 'custom_woocommerce_loop_columns', 20);
+
+function update_mini_cart_count() {
+    echo WC()->cart->get_cart_contents_count();
+    wp_die();
+}
+add_action('wp_ajax_update_mini_cart_count', 'update_mini_cart_count');
+add_action('wp_ajax_nopriv_update_mini_cart_count', 'update_mini_cart_count');
