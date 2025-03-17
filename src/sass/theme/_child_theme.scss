@@ -1,4 +1,3 @@
-
 .floating-menu {
 	.menu-box-absolute-position {
 		display: none;
@@ -36,10 +35,31 @@
 			}
 		}
 	}
-	
+
 	.logo.navbar-brand {
 		z-index: 1001;
 		position: relative;
 		background-color: #fff;
+	}
+}
+
+
+
+.product-template-default {
+	#woocommerce-wrapper {
+		#left-sidebar {
+			display: none !important;
+		}
+	}
+}
+
+
+#woocommerce-wrapper {
+	.custom-category-list {
+		padding-left: 0;
+		li {
+			list-style-type: none;
+			
+		}
 	}
 }

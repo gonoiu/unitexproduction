@@ -17,8 +17,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-get_header( 'shop' );
-
+get_header( 'page' );
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -27,7 +26,6 @@ get_header( 'shop' );
  * @hooked WC_Structured_Data::generate_website_data() - 30
  */
 do_action( 'woocommerce_before_main_content' );
-
 /**
  * Hook: woocommerce_shop_loop_header.
  *

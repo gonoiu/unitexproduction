@@ -14,12 +14,13 @@ $bootstrap_version = get_theme_mod('understrap_bootstrap_version', 'bootstrap4')
 $navbar_type = get_theme_mod('understrap_navbar_type', 'collapse'); ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<?php wp_head(); ?>
-</head>
+
+   <head>
+      <meta charset="<?php bloginfo('charset'); ?>">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="profile" href="http://gmpg.org/xfn/11">
+      <?php wp_head(); ?>
+   </head>
 
    <body <?php body_class("home theme-creote page-home-default-one"); ?> <?php understrap_body_attributes(); ?>>
 
@@ -111,26 +112,16 @@ $navbar_type = get_theme_mod('understrap_navbar_type', 'collapse'); ?>
 
 
                            foreach ($obj as $item => $value) {
-
                               $i++;
-
-
                            }
                         }
-
-
                      }
-
-
 
                      echo $i;
                      break;
 
                }
-
                /* COUNT PRODUSE IN COS */
-
-
                ?>
             </div>
             <i class="icon-shopping-cart"></i>
@@ -216,7 +207,7 @@ $navbar_type = get_theme_mod('understrap_navbar_type', 'collapse'); ?>
                                        style="width: 300px">
                                  </a>
                               </div>
-                              <?php 
+                              <?php
                               // Show category menu only on front page
                               if (is_front_page()): ?>
                               <div class="menu-box-absolute-position">
@@ -231,7 +222,7 @@ $navbar_type = get_theme_mod('understrap_navbar_type', 'collapse'); ?>
 
                                  $product_categories = get_terms($args);
 
-                                  if (!empty($product_categories) && !is_wp_error($product_categories)) {
+                                 if (!empty($product_categories) && !is_wp_error($product_categories)) {
                                     foreach ($product_categories as $category) {
                                        $category_link = get_term_link($category);
                                        if (is_wp_error($category_link)) {

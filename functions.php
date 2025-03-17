@@ -175,4 +175,27 @@ function enqueue_custom_scripts() {
     // Main script
     wp_enqueue_script('creote-extension', $script_dir . 'creote-extension.js', array('jquery-custom'), null, true);
 }
-add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+function custom_woocommerce_category_list() {
+    $args = array(
+        'taxonomy'     => 'product_cat',
+        'orderby'      => 'name',
+        'order'        => 'ASC',
+        'hide_empty'   => true,
+    );
+
+    $categories = get_terms( $args );
+
+    if ( ! empty( $categories ) ) {
+        echo '<h5>Categorii</h5>';
+        echo '<ul class="custom-category-list">';
+        foreach ( $categories as $category ) {
+            $link = get_term_link( $category );
+            echo '<li><a href="' . esc_url( $link ) . '">' . esc_html( $category->name ) . '</a></li>';
+        }
+        echo '</ul>';
+    }
+}
+
+// Use this where you want to display the list
+add_shortcode( 'category_list', 'custom_woocommerce_category_list' );

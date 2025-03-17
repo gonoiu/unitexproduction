@@ -14948,6 +14948,17 @@ figure.woocommerce-product-gallery__wrapper {
   background-color: #fff;
 }
 
+.product-template-default #woocommerce-wrapper #left-sidebar {
+  display: none !important;
+}
+
+#woocommerce-wrapper .custom-category-list {
+  padding-left: 0;
+}
+#woocommerce-wrapper .custom-category-list li {
+  list-style-type: none;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
