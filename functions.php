@@ -151,30 +151,30 @@ function custom_theme_enqueue_styles() {
 add_action('wp_enqueue_scripts', 'custom_theme_enqueue_styles');
 
 
-function enqueue_custom_scripts() {
-    // Define script directory
-    $script_dir = get_stylesheet_directory_uri() . '/assets/assets/js/';
+// function enqueue_custom_scripts() {
+//     // Define script directory
+//     $script_dir = get_stylesheet_directory_uri() . '/assets/assets/js/';
 
-    // Register scripts
-    wp_enqueue_script('jquery-custom', $script_dir . 'jquery-3.6.0.min.js', array('jquery'), null, true);
-    wp_enqueue_script('bootstrap', $script_dir . 'bootstrap.min.js', array('jquery-custom'), null, true);
-    wp_enqueue_script('fancybox', $script_dir . 'jquery.fancybox.js', array('jquery-custom'), null, true);
-    wp_enqueue_script('style-switcher', $script_dir . 'jQuery.style.switcher.min.js', array(), null, true);
-    wp_enqueue_script('flexslider', $script_dir . 'jquery.flexslider-min.js', array('jquery-custom'), null, true);
-    wp_enqueue_script('color-scheme', $script_dir . 'color-scheme.js', array(), null, true);
-    wp_enqueue_script('owl-carousel', $script_dir . 'owl.js', array('jquery-custom'), null, true);
-    wp_enqueue_script('swiper', $script_dir . 'swiper.min.js', array('jquery-custom'), null, true);
-    wp_enqueue_script('isotope', $script_dir . 'isotope.min.js', array('jquery-custom'), null, true);
-    wp_enqueue_script('countdown', $script_dir . 'countdown.js', array('jquery-custom'), null, true);
-    wp_enqueue_script('parallax', $script_dir . 'simpleParallax.min.js', array(), null, true);
-    wp_enqueue_script('appear', $script_dir . 'appear.js', array('jquery-custom'), null, true);
-    wp_enqueue_script('countTo', $script_dir . 'jquery.countTo.js', array('jquery-custom'), null, true);
-    wp_enqueue_script('sharer', $script_dir . 'sharer.js', array(), null, true);
-    wp_enqueue_script('validation', $script_dir . 'validation.js', array('jquery-custom'), null, true);
+//     // Register scripts
+//     wp_enqueue_script('jquery-custom', $script_dir . 'jquery-3.6.0.min.js', array('jquery'), null, true);
+//     wp_enqueue_script('bootstrap', $script_dir . 'bootstrap.min.js', array('jquery-custom'), null, true);
+//     wp_enqueue_script('fancybox', $script_dir . 'jquery.fancybox.js', array('jquery-custom'), null, true);
+//     wp_enqueue_script('style-switcher', $script_dir . 'jQuery.style.switcher.min.js', array(), null, true);
+//     wp_enqueue_script('flexslider', $script_dir . 'jquery.flexslider-min.js', array('jquery-custom'), null, true);
+//     wp_enqueue_script('color-scheme', $script_dir . 'color-scheme.js', array(), null, true);
+//     wp_enqueue_script('owl-carousel', $script_dir . 'owl.js', array('jquery-custom'), null, true);
+//     wp_enqueue_script('swiper', $script_dir . 'swiper.min.js', array('jquery-custom'), null, true);
+//     wp_enqueue_script('isotope', $script_dir . 'isotope.min.js', array('jquery-custom'), null, true);
+//     wp_enqueue_script('countdown', $script_dir . 'countdown.js', array('jquery-custom'), null, true);
+//     wp_enqueue_script('parallax', $script_dir . 'simpleParallax.min.js', array(), null, true);
+//     wp_enqueue_script('appear', $script_dir . 'appear.js', array('jquery-custom'), null, true);
+//     wp_enqueue_script('countTo', $script_dir . 'jquery.countTo.js', array('jquery-custom'), null, true);
+//     wp_enqueue_script('sharer', $script_dir . 'sharer.js', array(), null, true);
+//     wp_enqueue_script('validation', $script_dir . 'validation.js', array('jquery-custom'), null, true);
     
-    // Main script
-    wp_enqueue_script('creote-extension', $script_dir . 'creote-extension.js', array('jquery-custom'), null, true);
-}
+//     // Main script
+//     wp_enqueue_script('creote-extension', $script_dir . 'creote-extension.js', array('jquery-custom'), null, true);
+// }
 
 function custom_woocommerce_category_list() {
     $args = array(
@@ -211,3 +211,41 @@ function update_mini_cart_count() {
 }
 add_action('wp_ajax_update_mini_cart_count', 'update_mini_cart_count');
 add_action('wp_ajax_nopriv_update_mini_cart_count', 'update_mini_cart_count');
+
+
+function custom_enqueue_footer_scripts() {
+    // List of script files
+    $scripts = [
+        'jquery-3.6.0.min.js',
+        'bootstrap.min.js',
+        'jquery.fancybox.js',
+        'jQuery.style.switcher.min.js',
+        'jquery.flexslider-min.js',
+        'color-scheme.js',
+        'owl.js',
+        'swiper.min.js',
+        'isotope.min.js',
+        'countdown.js',
+        'simpleParallax.min.js',
+        'appear.js',
+        'jquery.countTo.js',
+        'sharer.js',
+        'validation.js',
+        'creote-extension.js' // Main script file
+    ];
+
+    // Base path for assets
+    $base_path = get_stylesheet_directory_uri() . '/assets/assets/js/';
+
+    // Enqueue each script
+    foreach ($scripts as $script) {
+        wp_enqueue_script( 
+            str_replace('.js', '', $script), // Handle name
+            $base_path . $script, 
+            ['jquery'], // Dependencies
+            null, // Version
+            true // Load in footer
+        );
+    }
+}
+add_action('wp_enqueue_scripts', 'custom_enqueue_footer_scripts');

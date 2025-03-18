@@ -480,6 +480,7 @@ $container = get_theme_mod('understrap_container_type');
 </div>
 <!---========================== javascript ==========================-->
 <?php wp_footer(); ?>
+
 <!---========================== javascript ==========================-->
 
 

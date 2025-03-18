@@ -181,12 +181,6 @@ $navbar_type = get_theme_mod('understrap_navbar_type', 'collapse'); ?>
                                  <div class="header_menu_box">
                                     <div class="navigation_menu">
                                        <ul id="myNavbar" class="navbar_nav">
-                                          <!-- 
-                                       <li class="menu-item nav-item"><a href="/" class="nav-link"> <span>Acasa</span></a></li>
-                                       <li class="menu-item nav-item"><a href="/despre-noi" class="nav-link"> <span>Despre noi</span></a></li>
-                                       <li class="menu-item nav-item"><a href="/magazin" class="nav-link"> <span>Magazin</span></a></li>
-                                       <li class="menu-item nav-item"><a href="/contact" class="nav-link"> <span>Contact</span></a></li> 
-                                    -->
 
 
                                           <li class="menu-item nav-item">
