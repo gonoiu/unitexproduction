@@ -51,21 +51,20 @@ $navbar_type = get_theme_mod('understrap_navbar_type', 'collapse'); ?>
 
       <div id="wrapper_full" class="content_all_warpper">
          <!----mini cart----->
-         <div class="mini_cart_togglers fixed_cart">
+         <a href="<?php echo wc_get_cart_url(); ?>" class="mini_cart_togglers fixed_cart">
             <div class="mini-cart-count">
                <span class="cart-count">
                   <?php echo WC()->cart->get_cart_contents_count(); ?>
                </span>
             </div>
             <i class="icon-shopping-cart"></i>
-         </div>
+         </a>
 
 
          <div id="page" class="page_wapper hfeed site">
 
             <div id="wrapper_full" class="content_all_warpper">
                <!----page-header----->
-
 
                <!----header----->
                <div class="header_area " id="header_contents">

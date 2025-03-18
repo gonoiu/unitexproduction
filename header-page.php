@@ -111,9 +111,9 @@
                   <header class="header header_default style_one get_sticky_header">
                      <div class="auto-container">
                         <div class="row align-items-center">
-                           <div class="col-lg-2 col-md-9 col-sm-9 col-xs-9 logo_column">
+                           <div class="col-lg-3 col-md-9 col-sm-9 col-xs-9 logo_column">
                               <div class="header_logo_box">
-                                 <a href="index.html" class="logo navbar-brand">
+                                 <a href="/" class="logo navbar-brand">
                                     <img src="<?php the_field('logo_header', 'options'); ?>" alt=""
                                        class="logo_default">
                                     <img src="<?php the_field('logo_header', 'options'); ?>" alt=""
@@ -121,7 +121,7 @@
                                  </a>
                               </div>
                            </div>
-                           <div class="col-lg-10 col-md-3 col-sm-3 col-xs-3 menu_column">
+                           <div class="col-lg-9 col-md-3 col-sm-3 col-xs-3 menu_column">
                               <div class="navbar_togglers hamburger_menu">
                                  <span class="line"></span>
                                  <span class="line"></span>
@@ -174,16 +174,17 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="col-lg-12">
+                           <!-- <div class="col-lg-12">
                               <div class="breadcrumbs creote">
                                  <ul class="breadcrumb m-auto">
-
                                     <?php echo do_shortcode("[breadcrumb]"); ?>
 
                                  </ul>
                               </div>
-                           </div>
+                           </div> -->
                         </div>
                      </div>
                   </div>
                </div>
+               <br>
+               <br>

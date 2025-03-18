@@ -228,7 +228,7 @@ function custom_enqueue_footer_scripts() {
         'countdown.js',
         'simpleParallax.min.js',
         'appear.js',
-        'jquery.countTo.js',
+        'jquermini_cart_togglers y.countTo.js',
         'sharer.js',
         'validation.js',
         'creote-extension.js' // Main script file
