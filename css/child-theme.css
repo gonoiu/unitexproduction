@@ -14919,13 +14919,23 @@ figure.woocommerce-product-gallery__wrapper {
   display: none;
 }
 
-.logo_column {
-  position: relative;
+.header .header_logo_box img {
+  width: 221px !important;
 }
+
+.auto-container.main-header-bar {
+  position: relative !important;
+  padding: 25px 20px !important;
+}
+.auto-container.main-header-bar .menu-item a {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
 .logo_column .menu-box-absolute-position {
   position: absolute;
-  top: 20px;
-  left: -8px;
+  top: 50px;
+  left: 0px;
   width: auto;
   height: auto;
   background-color: #fff;

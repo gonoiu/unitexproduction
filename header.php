@@ -129,9 +129,9 @@ $navbar_type = get_theme_mod('understrap_navbar_type', 'collapse'); ?>
                      </div>
                   </div>
                   <header class="header header_default style_one style_two_remade get_sticky_header">
-                     <div class="auto-container">
+                     <div class="auto-container main-header-bar">
                         <div class="row align-items-center">
-                           <div class="col-lg-2 col-md-9 col-sm-9 col-xs-9 logo_column ">
+                           <div class="col-lg-3 col-md-9 col-sm-9 col-xs-9 logo_column ">
                               <div class="header_logo_box">
                                  <a href="/" class="logo navbar-brand" style="">
                                     <img src="<?php the_field('logo_header', 'options'); ?>" alt="" class="logo_default"
@@ -171,7 +171,7 @@ $navbar_type = get_theme_mod('understrap_navbar_type', 'collapse'); ?>
                               </div>
                               <?php endif; ?>
                            </div>
-                           <div class="col-lg-10 col-md-3 col-sm-3 col-xs-3 menu_column">
+                           <div class="col-lg-9 col-md-3 col-sm-3 col-xs-3 menu_column">
                               <div class="navbar_togglers hamburger_menu">
                                  <span class="line"></span>
                                  <span class="line"></span>

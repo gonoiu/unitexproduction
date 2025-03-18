@@ -15,6 +15,11 @@
                   <div class="image-layer" style="background-image:url(<?php echo $img_bk; ?>)"></div>
                   <div class="auto-container">
                      <div class="d-flex align-items-center">
+                     <div class="col-lg-5 col-md-12  col-sm-12 col-xs-12 image_column">
+                           <div class="slider_image">
+                              <img src="<?php echo $img_rp; ?>" class="img-fluid" alt="chingi">
+                           </div>
+                        </div>
                         <div class="col-lg-7 col-md-12  col-sm-12 col-xs-12">
                            <div class="slider_content">
                               <h2 style="color: white;"><?php echo $text_1; ?></h2>
@@ -23,11 +28,7 @@
                                  Citeste mai mult... </a>
                            </div>
                         </div>
-                        <div class="col-lg-5 col-md-12  col-sm-12 col-xs-12 image_column">
-                           <div class="slider_image">
-                              <img src="<?php echo $img_rp; ?>" class="img-fluid" alt="chingi">
-                           </div>
-                        </div>
+
                      </div>
                   </div>
                </div>
