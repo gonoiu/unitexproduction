@@ -249,3 +249,22 @@ function custom_enqueue_footer_scripts() {
     }
 }
 add_action('wp_enqueue_scripts', 'custom_enqueue_footer_scripts');
+
+add_filter('woocommerce_get_price_html', function($price, $product) {
+    if ($product->is_type('variable')) {
+        return '<span class="price-label">Price: </span>' . $price;
+    }
+    return $price;
+}, 10, 2);
+
+add_filter('woocommerce_format_sale_price', function($price, $regular_price, $sale_price) {
+    return '<span class="woocommerce-Price-amount amount">' . wc_price($sale_price) . '</span>';
+}, 10, 3);
+
+add_filter('woocommerce_show_variation_price', '__return_true');
+
+add_filter('woocommerce_available_variation', function($data, $product, $variation) {
+    $data['price_html'] = '<span class="price-label">Price: </span>' . $variation->get_price_html();
+    return $data;
+}, 10, 3);
+

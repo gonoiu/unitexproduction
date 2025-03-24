@@ -15054,6 +15054,70 @@ span.price {
   font-weight: 700 !important;
 }
 
+.variations_form .variations {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.variations_form .variations td {
+  display: flex;
+  align-items: center;
+}
+
+.variations_form .single_variation_wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.variations_form .single_variation_wrap .woocommerce-variation-add-to-cart {
+  display: flex;
+  gap: 10px;
+}
+
+.variations_form .quantity {
+  display: flex;
+  align-items: center;
+}
+
+.variations_form .single_add_to_cart_button {
+  margin-left: 10px; /* Space between button and dropdown */
+}
+
+.woocommerce-variation-price {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.price-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.woocommerce-variation-add-to-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns everything to the left */
+  gap: 10px; /* Adds spacing between elements */
+}
+
+.woocommerce-variation-add-to-cart .quantity-label {
+  font-weight: bold; /* Makes the label more visible */
+}
+
+.woocommerce-variation-add-to-cart .quantity {
+  width: 100%; /* Ensures input field does not stretch */
+  max-width: 120px; /* Adjust width if necessary */
+}
+
+.woocommerce-variation-add-to-cart .single_add_to_cart_button {
+  width: auto; /* Keeps the button from stretching */
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
