@@ -16,9 +16,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-	<div class="cart-columns-wrapper" style="display: flex; justify-content: space-between;">
+	<div class="cart-column-wrapper">
 		<!-- Product List Column -->
-		<div class="cart-items-column" style="width: 70%; padding-right: 20px;">
+		<div class="cart-items-column" style="width: 100%; padding-bottom: 20px;">
 			<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 				<thead>
 					<tr>
@@ -110,8 +110,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 			</table>
 		</div>
 
-		<!-- Cart Totals Column -->
-		<div class="cart-totals-column" style="width: 28%; padding-left: 20px;">
+		<!-- Cart Totals Table -->
+		<div class="cart-totals-column" style="width: 100%; padding-top: 20px;">
 			<?php do_action( 'woocommerce_cart_collaterals' ); ?>
 		</div>
 	</div>
