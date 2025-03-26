@@ -33,8 +33,6 @@ $navbar_type = get_theme_mod('understrap_navbar_type', 'collapse'); ?>
       </div>
       <!--WhatsApp Icons-->
 
-
-
       <!--catalog-->
       <?php
       $file = get_field('catalog_en', 'options');
