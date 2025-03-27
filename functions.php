@@ -267,4 +267,3 @@ add_filter('woocommerce_available_variation', function($data, $product, $variati
     $data['price_html'] = '<span class="price-label">Price: </span>' . $variation->get_price_html();
     return $data;
 }, 10, 3);
-
