@@ -27,9 +27,8 @@
                            </div>
                         </div>
                         <div class="col-lg-3 col-md-12  col-sm-12 col-xs-12 image_column">
-                           <div class="slider_image">
-                              <img src="<?php echo $img_rp; ?>" class="img-fluid" alt="chingi">
-                           </div>
+                              <div class="slider_image" style="background-image: url(<?php echo $img_rp; ?>); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100%; width: 100%; min-height: 400px; overflow: hidden;">
+                              </div>
                         </div>
                      </div>
                   </div>

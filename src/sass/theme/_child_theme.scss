@@ -263,3 +263,17 @@ span.price {
 .col-4 {
 	width: 33.33%;
 }
+
+.woocommerce-loop-product__link {
+	span.price-label {
+		display: none;
+	}
+}
+
+.wpcf7-acceptance {
+	input {
+		width: auto !important;
+		height: auto !important;
+		vertical-align: inherit !important;
+	}
+}

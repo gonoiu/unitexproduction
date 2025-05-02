@@ -137,36 +137,37 @@ $navbar_type = get_theme_mod('understrap_navbar_type', 'collapse'); ?>
                                        style="width: 300px">
                                  </a>
                               </div>
-                              <?php
-                              // Show category menu only on front page
-                              if (is_front_page()): ?>
-                              <div class="menu-box-absolute-position">
-                                 <?php
-                                 $args = array(
+                                <?php
+                                // Show category menu only on front page
+                                if (is_front_page()): ?>
+                                <div class="menu-box-absolute-position">
+                                  <?php
+                                  $args = array(
                                     'taxonomy' => 'product_cat',
                                     'orderby' => 'name',
                                     'order' => 'ASC',
                                     'hide_empty' => false,
                                     'parent' => 0,
-                                 );
+                                    'exclude' => get_term_by('slug', 'uncategorized', 'product_cat')->term_id,
+                                  );
 
-                                 $product_categories = get_terms($args);
+                                  $product_categories = get_terms($args);
 
-                                 if (!empty($product_categories) && !is_wp_error($product_categories)) {
+                                  if (!empty($product_categories) && !is_wp_error($product_categories)) {
                                     foreach ($product_categories as $category) {
                                        $category_link = get_term_link($category);
                                        if (is_wp_error($category_link)) {
-                                          continue;
+                                         continue;
                                        }
                                        echo '<div class="product-category">';
                                        echo '<a href="' . esc_url($category_link) . '">' . esc_html($category->name) . '</a>';
                                        echo '</div>';
                                     }
-                                 }
-                                 ?>
+                                  }
+                                  ?>
 
-                              </div>
-                              <?php endif; ?>
+                                </div>
+                                <?php endif; ?>
                            </div>
                            <div class="col-lg-9 col-md-3 col-sm-3 col-xs-3 menu_column">
                               <div class="navbar_togglers hamburger_menu">

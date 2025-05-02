@@ -186,5 +186,37 @@
                      </div>
                   </div>
                </div>
+                  <div class="small-banner-notice">
+                    <div class="box">
+                      <p>Transport Gratuit la comenzi de peste RON 699 !!</p>
+                    </div>
+                  </div>
+                    <style>
+                     .small-banner-notice {
+                       background-color: #007BFF; /* A shade of blue */
+                       text-align: center;
+                       padding: 15px 0; /* Padding for space up and down */
+                     }
+                     .small-banner-notice .box p {
+                       color: #FFFFFF; /* White text */
+                       font-weight: bold; /* Bold text */
+                       margin: 0; /* Remove default margin */
+                       display: flex;
+                       align-items: center;
+                       justify-content: center;
+                       gap: 10px; /* Space between icons and text */
+                     }
+                     .small-banner-notice .box p i {
+                       font-size: 1.2em; /* Adjust icon size */
+                     }
+                    </style>
+                    <div class="small-banner-notice">
+                     <div class="box">
+                       <p>
+                        <i class="fa fa-truck"></i> Transport Gratuit la comenzi de peste RON 699 !! <i class="fa fa-truck"></i>
+                       </p>
+                     </div>
+                    </div>
+
                <br>
                <br>

@@ -267,3 +267,12 @@ add_filter('woocommerce_available_variation', function($data, $product, $variati
     $data['price_html'] = '<span class="price-label">Price: </span>' . $variation->get_price_html();
     return $data;
 }, 10, 3);
+
+add_filter( 'woocommerce_my_account_my_orders_actions', 'remove_woocommerce_order_actions', 20, 2 );
+
+function remove_woocommerce_order_actions( $actions, $order ) {
+    // Remove specific buttons by their keys
+    unset( $actions['view'] );     // View Order button
+    
+    return $actions;
+}

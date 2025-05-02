@@ -25,7 +25,7 @@ get_header('page');
 				<div class="contact_form_box_inner">
 					<div class="contact_form_shortcode">
 
-						<?php echo do_shortcode('[contact-form-7 id="722d7a7" title="Contact EN"]'); ?>
+						<?php echo do_shortcode('[contact-form-7 id="045c036" title="Contact RO"]'); ?>
 
 
 						<!-- <form id="contact-form" method="post" action="contact.php" role="form">
